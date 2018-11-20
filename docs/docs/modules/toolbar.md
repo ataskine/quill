@@ -16,7 +16,7 @@ The Toolbar module allow users to easily format Quill's contents.
   <div id="toolbar-editor" class="editor"></div>
 </div>
 
-It can be configured with a custom container and handlers.
+It can be configured with a custom container, handlers and buttons.
 
 ```javascript
 var quill = new Quill('#editor', {
@@ -25,7 +25,10 @@ var quill = new Quill('#editor', {
       container: '#toolbar',  // Selector for toolbar container
       handlers: {
         'bold': customBoldHandler
-      }
+      },
+      buttons: [
+        ['bold', 'italic', 'underline']
+      ]
     }
   }
 });

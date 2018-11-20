@@ -22,6 +22,9 @@ class Toolbar extends Module {
     if (!(this.container instanceof HTMLElement)) {
       return debug.error('Container required for toolbar', this.options);
     }
+    if (Array.isArray(this.options.buttons)) {
+      addControls(this.container, this.options.buttons);
+    }
     this.container.classList.add('ql-toolbar');
     this.controls = [];
     this.handlers = {};
